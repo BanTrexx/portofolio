@@ -39,24 +39,43 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// === SweetAlert2 adaptif + liquid glass ===
 function showAlert(message, type = "info") {
   const isDark = document.body.classList.contains("dark-mode");
 
   Swal.fire({
-    title: type === "success" ? "✅ Berhasil" : "ℹ️ Info",
+    title:
+      type === "success"
+        ? "✅ Berhasil"
+        : type === "warning"
+        ? "⚠️ Peringatan"
+        : "ℹ️ Info",
     text: message,
     icon: type,
-    background: isDark ? "rgba(25, 25, 25, 0.7)" : "rgba(255, 255, 255, 0.7)",
+    background: isDark ? "rgba(20, 20, 20, 0.55)" : "rgba(255, 255, 255, 0.55)",
     color: isDark ? "#fff" : "#212529",
-    backdrop: `
-      rgba(0,0,0,0.3)
-      blur(10px)
-    `,
     confirmButtonColor: isDark ? "#66b2ff" : "#0d6efd",
     confirmButtonText: "Oke",
     customClass: {
       popup: "swal-glass",
+      container: "swal-custom-container", // 🔹 untuk layer blur manual
     },
+    backdrop: false, // ⛔ menonaktifkan layer abu default SweetAlert
   });
+
+  // 🔹 Tambahkan manual layer blur transparan tipis
+  const existingOverlay = document.querySelector(".custom-blur-overlay");
+  if (!existingOverlay) {
+    const blurLayer = document.createElement("div");
+    blurLayer.className = "custom-blur-overlay";
+    document.body.appendChild(blurLayer);
+
+    // Hapus layer setelah swal ditutup
+    const observer = new MutationObserver(() => {
+      if (!document.querySelector(".swal2-container")) {
+        blurLayer.remove();
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, { childList: true });
+  }
 }

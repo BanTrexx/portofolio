@@ -163,10 +163,92 @@ body.dark-mode .social-links a {
   }
 }
 
-/* === SweetAlert (liquid glass style) === */
+/* === SweetAlert liquid glass === */
 .swal2-popup.swal-glass {
   backdrop-filter: blur(16px);
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .swal2-popup.swal-glass {
+  background: rgba(25, 25, 25, 0.55);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Custom blur overlay === */
+.custom-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 999; /* di bawah swal popup */
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Fix background gelap di swal success === */
+.swal2-success {
+  background: transparent !important; /* hilangkan latar bawaan */
+}
+
+/* Hilangkan efek radial gradient internal SweetAlert */
+.swal2-success::before,
+.swal2-success::after,
+.swal2-success-ring {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Sesuaikan warna lingkaran sukses agar tetap kontras */
+body.dark-mode .swal2-success-line-tip,
+body.dark-mode .swal2-success-line-long {
+  background-color: #6be585 !important; /* hijau lembut di dark mode */
+}
+
+body.bright-mode .swal2-success-line-tip,
+body.bright-mode .swal2-success-line-long {
+  background-color: #28a745 !important; /* hijau standard di light mode */
+}
+
+/* === SweetAlert Fix: Hilangkan latar SVG gelap di icon success === */
+.swal2-success-circular-line-left,
+.swal2-success-circular-line-right,
+.swal2-success-fix {
+  background: transparent !important;
+  display: none !important; /* sembunyikan layer lingkaran gelap */
+}
+
+.swal2-success-ring {
+  stroke: none !important; /* hilangkan ring bayangan */
+}
+
+/* Pastikan hanya centang-nya yang tampil */
+.swal2-icon.swal2-success {
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Perjelas warna centang sesuai tema */
+body.dark-mode .swal2-success-line-tip,
+body.dark-mode .swal2-success-line-long {
+  background-color: #6be585 !important;
+}
+
+body.bright-mode .swal2-success-line-tip,
+body.bright-mode .swal2-success-line-long {
+  background-color: #28a745 !important;
 }
