@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background 0.5s, color 0.5s;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Mode === */
+.bright-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+.dark-mode {
+  background-color: #0d0d0d;
+  color: #f8f9fa;
+}
+
+/* === Floating Glass Navbar === */
+.glass-nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  z-index: 1000;
+  transition: background 0.5s, color 0.5s;
+}
+.dark-mode .glass-nav {
+  background-color: rgba(18, 18, 18, 0.6) !important;
+}
+
+/* Navbar Text */
+.navbar-brand,
+.nav-link {
+  color: inherit !important;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+.dark-mode .nav-link:hover {
+  color: #66b2ff !important;
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath stroke='currentColor' stroke-width='1.5' d='M1 3h14M1 8h14M1 13h14'/%3E%3C/svg%3E");
+}
+
+/* Section */
+.section {
+  width: 100%;
+  padding: 3rem 1rem;
+}
+.bg-section {
+  background: rgba(0, 123, 255, 0.05);
+}
+.dark-mode .bg-section {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Cards */
+.project-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-title {
+  font-weight: 600;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.dark-mode .project-card {
+  background-color: #1c1c1c;
+  color: #f8f9fa;
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+  color: #fff;
+}
+.dark-mode footer {
+  background-color: #000;
+}
+
+/* Social Links */
+.social-links a {
+  color: #000;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+body.dark-mode .social-links a {
+  color: #fff;
+}
+.social-links a:hover i.bi-linkedin {
+  color: #0a66c2;
+}
+.social-links a:hover i.bi-github {
+  color: #6e5494;
+}
+.social-links a:hover i.bi-instagram {
+  color: #e4405f;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .glass-nav {
+    width: 90%;
+    top: 35px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .dark-mode .navbar-collapse {
+    background: rgba(18, 18, 18, 0.9);
+  }
+  .navbar-nav {
+    flex-direction: column !important;
+    gap: 0.6rem;
+  }
+  /* === Navbar Toggler === */
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.35rem;
+    background: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  /* Default: hitam (untuk bright mode) */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='black' viewBox='0 0 16 16'%3E%3Cpath stroke='black' stroke-width='1.5' d='M1 3h14M1 8h14M1 13h14'/%3E%3C/svg%3E");
+  }
+
+  /* Saat dark mode: ganti ke putih */
+  body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' viewBox='0 0 16 16'%3E%3Cpath stroke='white' stroke-width='1.5' d='M1 3h14M1 8h14M1 13h14'/%3E%3C/svg%3E");
+  }
+}

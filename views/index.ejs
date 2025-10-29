@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+
+    <!-- Bootstrap + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- Floating Liquid Navbar -->
+    <nav class="navbar navbar-expand-lg glass-nav rounded-pill px-4 py-2">
+      <div class="container-fluid">
+        <!-- Brand di kiri dalam kapsul -->
+        <a class="navbar-brand fw-bold text-brand" href="#">Portofolio</a>
+
+        <!-- Toggler di kanan dalam kapsul -->
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu dropdown -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarMenu"
+        >
+          <ul class="navbar-nav flex-row gap-3 align-items-center">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <button id="modeToggle" class="btn btn-outline-light ms-2">
+                🌙
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HOME Section -->
+    <section
+      id="home"
+      class="section vh-100 d-flex flex-column justify-content-center align-items-center text-center"
+    >
+      <h1 class="fw-bold mb-3"><%= name %></h1>
+      <p class="lead mb-4">
+        Software Engineer | Game & Interactive Developer | Content Creator
+      </p>
+      <a href="#about" class="btn btn-primary btn-lg">Lihat Selengkapnya</a>
+    </section>
+
+    <!-- ABOUT Section -->
+    <section
+      id="about"
+      class="section vh-100 d-flex flex-column justify-content-center text-center px-4"
+    >
+      <h2 class="mb-4">Tentang Saya</h2>
+      <p class="mx-auto" style="max-width: 700px">
+        Saya seorang mahasiswa Teknologi Informasi di Telkom University Kampus
+        Jakarta dengan pengalaman profesional lebih dari dua tahun di bidang
+        pengembangan perangkat lunak dan konten multimedia interaktif. Fokus
+        saya adalah menggabungkan aspek teknis dan kreatif untuk menciptakan
+        pengalaman digital yang lebih imersif — mulai dari pengembangan web,
+        game engine, hingga proyek IoT interaktif. Saya terbiasa bekerja dalam
+        tim lintas disiplin, mengelola proyek dengan tenggat waktu ketat, serta
+        terus beradaptasi dengan teknologi terbaru.
+      </p>
+    </section>
+
+    <!-- PROJECTS Section -->
+    <section
+      id="projects"
+      class="section vh-100 d-flex flex-column justify-content-center text-center bg-section px-4"
+    >
+      <h2 class="mb-5">Projek Saya</h2>
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="card project-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Sistem Pengelolaan Karyawan – Nexteam Teknologi Indonesia
+                  (2022)
+                </h5>
+                <p class="card-text">
+                  Mengembangkan sistem web pengelolaan karyawan dan memimpin
+                  migrasi ke framework modern, meningkatkan performa sebesar 40%
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card project-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Website Kreatif – IMAJIWA Creative Studio (2023–sekarang)
+                </h5>
+                <p class="card-text">
+                  Mengembangkan website berbasis interaktif dengan elemen 3D dan
+                  motion graphic, mendukung pertumbuhan pengguna 100%.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card project-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Proyek Samsung Innovation Campus (2022)
+                </h5>
+                <p class="card-text">
+                  Membangun proyek berbasis teknologi inovatif hingga menjadi
+                  finalis nasional dari 1000+ peserta.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT Section -->
+    <section
+      id="contact"
+      class="section d-flex flex-column justify-content-center align-items-center text-center px-4"
+      style="min-height: 100vh"
+    >
+      <div class="container" style="max-width: 800px">
+        <h2 class="mb-4">Hubungi Saya</h2>
+        <form id="contactForm" class="w-100">
+          <input
+            type="text"
+            id="name"
+            class="form-control mb-3"
+            placeholder="Nama Anda"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            class="form-control mb-3"
+            placeholder="Email Anda"
+            required
+          />
+          <textarea
+            id="message"
+            class="form-control mb-3"
+            rows="3"
+            placeholder="Pesan..."
+            required
+          ></textarea>
+          <button
+            type="button"
+            class="btn btn-primary w-100 mb-4"
+            onclick="sendMessage()"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+
+        <!-- Media Sosial -->
+        <div class="social-links d-flex justify-content-center gap-4 mt-2">
+          <a
+            href="https://www.linkedin.com/in/muhammad-faiz-satrio-92a893270/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/BanTrexx"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/f.xxz_/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-3 text-center small">
+      <p>&copy; 2025 <%= name %> | Semua Hak Dilindungi</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
