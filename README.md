@@ -54,19 +54,19 @@ Saya memiliki ketertarikan kuat pada integrasi antara **desain visual, pemrogram
 
 ## 📂 Struktur Proyek
 
-📁 portofolio/
-├── 📄 server.js
-├── 📄 package.json
-├── 📁 views/
+portofolio/
+├── server.js
+├── package.json
+├── views/
 │ └── index.ejs
-├── 📁 public/
-│ ├── 📁 css/
+├── public/
+│ ├── css/
 │ │ └── style.css
-│ ├── 📁 js/
+│ ├── js/
 │ │ └── script.js
-│ └── 📁 assets/
+│ └── assets/
 │ └── (gambar proyek & ikon)
-└── 📄 README.md
+└── README.md
 
 ---
 
