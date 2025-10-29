@@ -2,6 +2,12 @@
 
 ![Preview](./new_preview.png)
 
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)](https://mfaizsatrio-portofolio.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 Selamat datang di repositori **portofolio pribadi** saya — sebuah website interaktif yang menampilkan profil, pengalaman, dan karya saya sebagai **Web Developer & Designer**.  
 Dibangun menggunakan **Node.js (Express + EJS)**, **Bootstrap 5**, dan **JavaScript murni**, dengan dukungan **Dark Mode adaptif** dan **desain “liquid glass” responsif.**
 
@@ -54,18 +60,19 @@ Saya memiliki ketertarikan kuat pada integrasi antara **desain visual, pemrogram
 
 ## 📂 Struktur Proyek
 
+```bash
 portofolio/
 ├── server.js
 ├── package.json
 ├── views/
-│ └── index.ejs
+│   └── index.ejs
 ├── public/
-│ ├── css/
-│ │ └── style.css
-│ ├── js/
-│ │ └── script.js
-│ └── assets/
-│ └── (gambar proyek & ikon)
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── assets/
+│       └── (gambar proyek & ikon)
 └── README.md
 
 ---
@@ -75,17 +82,18 @@ portofolio/
 Jika kamu tertarik untuk berkolaborasi, jangan ragu untuk menghubungi saya melalui:
 
 - **📧 Email:** m.faizsatrio@gmail.com
-- **💼 LinkedIn:** [linkedin.com/in/mfaizsatrio](https://www.linkedin.com/in/mfaizsatrio)
+- **💼 LinkedIn:** [linkedin.com/in/mfaizsatrio](https://www.linkedin.com/in/muhammad-faiz-satrio-92a893270/)
 - **💻 GitHub:** [github.com/BanTrexx](https://github.com/BanTrexx)
-- **📸 Instagram:** [instagram.com/mfaizsatrio](https://instagram.com/mfaizsatrio)
+- **📸 Instagram:** [instagram.com/mfaizsatrio](https://www.instagram.com/f.xxz_/)
 
 ---
 
 ## ⚖️ Lisensi
 
-Proyek ini bersifat **open source** di bawah lisensi **MIT**.  
+Proyek ini bersifat **open source** di bawah lisensi **MIT**.
 Kamu bebas menggunakannya untuk belajar, mengembangkan, atau menginspirasi karya kamu sendiri, dengan tetap mencantumkan kredit yang sesuai.
 
 ---
 
 **Dibuat dengan ❤️ oleh [M. Faiz Satrio](https://mfaizsatrio-portofolio.vercel.app/)**
+```
