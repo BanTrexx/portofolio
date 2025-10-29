@@ -1,6 +1,6 @@
 # 🌐 Portofolio — M. Faiz Satrio
 
-![Preview](https://mfaizsatrio-portofolio.vercel.app/assets/preview.png)
+![Preview](./preview.png)
 
 Selamat datang di repositori **portofolio pribadi** saya — sebuah website interaktif yang menampilkan profil, pengalaman, dan karya saya sebagai **Web Developer & Designer**.  
 Dibangun menggunakan **Node.js (Express + EJS)**, **Bootstrap 5**, dan **JavaScript murni**, dengan dukungan **Dark Mode adaptif** dan **desain “liquid glass” responsif.**
