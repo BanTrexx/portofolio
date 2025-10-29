@@ -75,6 +75,7 @@ portofolio/
 │       └── (gambar proyek & ikon)
 └── README.md
 ```
+
 ---
 
 ## 📬 Kontak
@@ -96,4 +97,3 @@ Kamu bebas menggunakannya untuk belajar, mengembangkan, atau menginspirasi karya
 ---
 
 **Dibuat dengan ❤️ oleh [M. Faiz Satrio](https://mfaizsatrio-portofolio.vercel.app/)**
-```
